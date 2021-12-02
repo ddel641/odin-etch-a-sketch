@@ -4,27 +4,26 @@ body {
     justify-items: center;
     align-items: center;
 }
+
 .sketchArea {
     display: flex;
     flex-direction: column;
     /* justify-content: space-evenly; */
-    height: 400px;
-    width: 400px;
+    height: 600px;
+    width: 600px;
     border: solid;
-
 }
 
 .row {
     display: flex;
     flex-grow: 1;
-    border: solid 1px;
+    /* border: solid 1px; */
     justify-content: space-evenly;
-
 }
 
 .box {
     flex-grow: 1;
-    border: solid 1px;
+    /* border: solid 1px; */
     display: flex;
 }
 
