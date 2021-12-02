@@ -11,6 +11,7 @@ body {
     height: 400px;
     width: 400px;
     border: solid;
+
 }
 
 .row {
@@ -22,5 +23,11 @@ body {
 }
 
 .box {
+    flex-grow: 1;
     border: solid 1px;
+    display: flex;
+}
+
+.drawn {
+    background-color: black;
 }
