@@ -40,11 +40,24 @@ function clearDrawing(){
 
 // Create an event listener that changes box bg-color when mouseover
 function boxListener() {
+    let re = /([0-9]*%)/;
     const boxes = document.querySelectorAll(".box");
     boxes.forEach((box) => {
 
         box.addEventListener("mouseenter", () => {
-            box.classList.add("drawn");
+            if (box.getAttribute("style")) {
+                let s = box.getAttribute("style");
+                console.log(typeof re);
+                console.log(s.match(re)[0]);
+                let brightness = parseFloat(s.match(re)[0]);
+                box.style.filter = `brightness(${brightness-10}%)`
+            } else{
+                let c1 = Math.floor(Math.random()*256);
+                let c2 = Math.floor(Math.random()*256);
+                let c3 = Math.floor(Math.random()*256);
+                box.style.backgroundColor = `rgb(${c1}, ${c2}, ${c3})`;
+                box.style.filter = "brightness(100%)";
+            }
         });
     })
 }
